@@ -22,14 +22,15 @@ spring:
   application:
     name: order
   datasource:
-    username: chris
-    password: 123123
-    url: 'jdbc:mysql://solar_mysql:3306/order?useLegacyDatetimeCode=false&serverTimezone=Asia/Hong_Kong&useSSL=false'
+   username: root
+   password: '!yumama666'
+   url: 'jdbc:mysql://rm-uf64h3g1yat0070cvo.mysql.rds.aliyuncs.com/order?useLegacyDatetimeCode=false&serverTimezone=Asia/Hong_Kong&useSSL=false&?createDatabaseIfNotExist=true'
   rabbitmq:
-    host: rabbitmq
-    username: chris
-    password: 123123
-    virtual-host: prontera
+    host: 47.94.238.190
+    port: 5672
+    username: daihao001
+    password: wuyudexiaoxiaogou
+    virtual-host: /
     listener:
       retry:
         enabled: true

@@ -20,10 +20,11 @@ eureka:
     prefer-ip-address: false
 spring:
   rabbitmq:
-    host: rabbitmq
-    username: chris
-    password: 123123
-    virtual-host: prontera
+    host: 47.94.238.190
+    port: 5672
+    username: daihao001
+    password: wuyudexiaoxiaogou
+    virtual-host: /
     listener:
       retry:
         enabled: true
@@ -34,12 +35,12 @@ spring:
     config:
       server:
         git:
-          uri: 'https://git.oschina.net/witless/conf-repo.git'
+          uri: 'https://gitee.com/DaiHao001/conf-repo.git'
           #uri: 'https://github.com/prontera/solar.git'
-          #searchPaths: '{application}'
+          #searchPaths: '/config-repo'
           clone-on-start: true
-          #username: 'chris'
-          #password: '123123123'
+          username: 'DaiHao001'
+          password: 'liu112233'
         encrypt:
           enabled: false
   application:

@@ -13,6 +13,7 @@ public final class Jacksons {
     private Jacksons() {
     }
 
+
     public static <T> String parse(T obj) {
         try {
             if (obj == null) {
@@ -26,6 +27,7 @@ public final class Jacksons {
     }
 
     public static <T> String parseInPrettyMode(T obj) {
+        System.out.println("------------"+obj.toString());
         try {
             return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
         } catch (JsonProcessingException e) {
