@@ -11,7 +11,22 @@ import java.util.List;
 public interface ProductMapper extends CrudMapper<Product> {
     List<Product> selectAll(@Param("offset") int offset, @Param("limited") int limited);
 
+    /**
+     *  <update id="consumeStock">
+          UPDATE t_product
+         SET stock = stock - 1
+         WHERE id = #{productId} AND stock > 0
+        </update>
+     */
     int consumeStock(@Param("productId") Long productId);
 
+    /**
+     *   <update id="returnReservedStock">
+             UPDATE t_product
+             SET stock = stock + 1
+             WHERE id = #{productId}
+         </update>
+     *
+     */
     int returnReservedStock(@Param("productId") Long productId);
 }

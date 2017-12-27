@@ -83,6 +83,7 @@ public class OrderService extends CrudServiceImpl<Order> {
         order.setProductId(productId);
         order.setPrice(product.getPrice());
         order.setStatus(OrderStatus.PROCESSING);
+        //插入订单
         super.persistNonNullProperties(order);
         // 预留库存
         reserveProductAndPersistParticipant(order);
@@ -180,6 +181,7 @@ public class OrderService extends CrudServiceImpl<Order> {
                 payloadBuilder.put("user_id", order.getUserId());
                 payloadBuilder.put("product_id", order.getProductId());
                 // 发送积分添加事件
+                //todo send membership
                 publisher.persistPublishMessage(Jacksons.parse(payloadBuilder.build()), EventBusinessType.ADD_PTS.name());
             }
         } catch (HystrixRuntimeException e) {
