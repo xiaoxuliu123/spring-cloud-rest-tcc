@@ -21,6 +21,10 @@ eureka:
 spring:
   application:
     name: order
+#  datasource:
+#    username: root
+#    password: '!yumama666'
+#    url: 'jdbc:mysql://rm-uf64h3g1yat0070cvo.mysql.rds.aliyuncs.com/order?useLegacyDatetimeCode=false&serverTimezone=Asia/Hong_Kong&useSSL=false&?createDatabaseIfNotExist=true'
   rabbitmq:
     host: 47.94.238.190
     port: 5672

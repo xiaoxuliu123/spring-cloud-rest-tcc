@@ -19,12 +19,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 
-@EnableTccTransaction
-@EnableAspectJAutoProxy
-@ComponentScan
+//@EnableTccTransaction
+//@EnableAspectJAutoProxy
 
 @EnableFeignClients
 @SpringCloudApplication
+@MapperScan(basePackages = "com.github.prontera.persistence", annotationClass = MyBatisRepository.class)
 public class OrderMsApplication {
 
     public static void main(String[] args) {
