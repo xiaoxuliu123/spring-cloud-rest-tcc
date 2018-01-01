@@ -21,7 +21,6 @@ import javax.sql.DataSource;
 
 @EnableTccTransaction
 @EnableAspectJAutoProxy
-@ComponentScan
 
 @EnableFeignClients
 @SpringCloudApplication
