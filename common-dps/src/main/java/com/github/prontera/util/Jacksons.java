@@ -27,7 +27,6 @@ public final class Jacksons {
     }
 
     public static <T> String parseInPrettyMode(T obj) {
-        System.out.println("------------"+obj.toString());
         try {
             return MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
         } catch (JsonProcessingException e) {

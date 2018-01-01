@@ -31,6 +31,7 @@ import java.util.Map;
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler", "fieldHandler"}, ignoreUnknown = true)
 public class RequestDetailsLogger {
 
+
     @JsonIgnore
     private final HttpServletRequest request = ServletContextHolder.getRequest();
 
