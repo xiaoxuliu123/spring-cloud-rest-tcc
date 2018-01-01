@@ -1,9 +1,6 @@
 package com.github.prontera;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.mengyun.tcctransaction.spring.EnableTccTransaction;
-import org.mengyun.tcctransaction.spring.repository.SpringJdbcTransactionRepository;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,11 +16,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 
-@EnableTccTransaction
-@EnableAspectJAutoProxy
+//@EnableTccTransaction
+//@EnableAspectJAutoProxy
 
 @EnableFeignClients
 @SpringCloudApplication
+//@MapperScan(basePackages = "com.github.prontera.persistence", annotationClass = MyBatisRepository.class)
 public class OrderMsApplication {
 
     public static void main(String[] args) {
