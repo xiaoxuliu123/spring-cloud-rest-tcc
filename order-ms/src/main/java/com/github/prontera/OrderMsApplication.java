@@ -21,6 +21,7 @@ import javax.sql.DataSource;
 
 @EnableFeignClients
 @SpringCloudApplication
+@EnableTransactionManagement
 //@MapperScan(basePackages = "com.github.prontera.persistence", annotationClass = MyBatisRepository.class)
 public class OrderMsApplication {
 
